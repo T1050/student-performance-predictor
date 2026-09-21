@@ -226,7 +226,7 @@ export const RosterTable: React.FC<RosterTableProps> = ({
                 return (
                   <tr
                     key={student.id}
-                    className="hover:bg-slate-50/60 transition-colors group"
+                    className="hover:bg-slate-50/60 dark:hover:bg-slate-800/60 transition-colors group"
                   >
                     {/* Name and ID */}
                     <td className="py-3 px-4">

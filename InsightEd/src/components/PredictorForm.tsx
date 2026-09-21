@@ -54,9 +54,13 @@ export const PredictorForm: React.FC<PredictorFormProps> = ({
     field: 'attendanceRate' | 'weeklyStudyHours' | 'previousSemesterScore' | 'sleepHoursPerNight',
     val: number
   ) => {
+    let cleanVal = val;
+    if (field === 'weeklyStudyHours') {
+      cleanVal = Math.min(50, Math.max(0, val));
+    }
     onChange({
       ...input,
-      [field]: val,
+      [field]: cleanVal,
     });
   };
 
@@ -281,7 +285,7 @@ export const PredictorForm: React.FC<PredictorFormProps> = ({
                   id="number-study-hours"
                   type="number"
                   min="0"
-                  max="39"
+                  max="50"
                   step="1"
                   value={input.weeklyStudyHours}
                   onChange={(e) => handleNumberChange('weeklyStudyHours', parseInt(e.target.value) || 0)}
@@ -294,7 +298,7 @@ export const PredictorForm: React.FC<PredictorFormProps> = ({
               id="slider-study-hours"
               type="range"
               min="0"
-              max="39"
+              max="50"
               step="1"
               value={input.weeklyStudyHours}
               onChange={(e) => handleNumberChange('weeklyStudyHours', parseInt(e.target.value))}
@@ -302,8 +306,8 @@ export const PredictorForm: React.FC<PredictorFormProps> = ({
             />
             <div className="flex justify-between text-[10px] text-slate-400">
               <span>0 hrs</span>
-              <span>20 hrs (Typical)</span>
-              <span>39 hrs (Max)</span>
+              <span>25 hrs (Typical)</span>
+              <span>50 hrs (Max)</span>
             </div>
           </div>
 
@@ -585,10 +589,10 @@ export const PredictorForm: React.FC<PredictorFormProps> = ({
           <button
             id="btn-submit-predict"
             type="submit"
-            className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold text-white bg-teal-600 hover:bg-teal-700 active:bg-teal-800 rounded-lg shadow-xs transition-all"
+            className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold text-white bg-teal-600 hover:bg-teal-700 active:bg-teal-800 rounded-lg shadow-xs transition-all cursor-pointer"
           >
             <Play className="w-3.5 h-3.5 fill-white" />
-            <span>Save to Roster</span>
+            <span>Predict Score</span>
           </button>
         </div>
       </div>

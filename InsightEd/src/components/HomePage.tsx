@@ -242,54 +242,58 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
-            <div className="flex items-center gap-2 text-slate-400 text-xs font-medium uppercase tracking-wider">
-              <Users className="w-3.5 h-3.5 text-teal-600" />
+          {/* Card 1: Total Evaluated */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-2xs transition-all">
+            <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase tracking-wider">
+              <Users className="w-4 h-4 text-teal-600 dark:text-teal-400" />
               <span>Total Evaluated</span>
             </div>
-            <div className="text-2xl sm:text-3xl font-bold font-mono text-slate-900 mt-1">
+            <div className="text-2xl sm:text-3xl font-extrabold font-mono text-slate-900 dark:text-white mt-1.5">
               {totalStudents}
             </div>
-            <div className="text-[11px] text-slate-400 mt-1">
+            <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
               Active student roster
             </div>
           </div>
 
-          <div className="p-4 rounded-xl bg-emerald-50/50 border border-emerald-100">
-            <div className="flex items-center gap-2 text-emerald-700 text-xs font-medium uppercase tracking-wider">
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+          {/* Card 2: Pass Rate */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-emerald-50/70 dark:bg-emerald-950/40 border border-emerald-200/80 dark:border-emerald-700/50 shadow-2xs transition-all">
+            <div className="flex items-center gap-2 text-emerald-800 dark:text-emerald-300 text-xs font-semibold uppercase tracking-wider">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
               <span>Pass Rate (&gt;50)</span>
             </div>
-            <div className="text-2xl sm:text-3xl font-bold font-mono text-emerald-800 mt-1">
+            <div className="text-2xl sm:text-3xl font-extrabold font-mono text-emerald-800 dark:text-emerald-300 mt-1.5">
               {passRate}%
             </div>
-            <div className="text-[11px] text-emerald-600 mt-1">
+            <div className="text-xs text-emerald-700 dark:text-emerald-300/90 mt-1 font-medium">
               {passedStudents} students passing
             </div>
           </div>
 
-          <div className="p-4 rounded-xl bg-rose-50/50 border border-rose-100">
-            <div className="flex items-center gap-2 text-rose-700 text-xs font-medium uppercase tracking-wider">
-              <AlertTriangle className="w-3.5 h-3.5 text-rose-500" />
+          {/* Card 3: At-Risk */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-rose-50/70 dark:bg-rose-950/40 border border-rose-200/80 dark:border-rose-700/50 shadow-2xs transition-all">
+            <div className="flex items-center gap-2 text-rose-800 dark:text-rose-300 text-xs font-semibold uppercase tracking-wider">
+              <AlertTriangle className="w-4 h-4 text-rose-600 dark:text-rose-400" />
               <span>At-Risk (&le;50)</span>
             </div>
-            <div className="text-2xl sm:text-3xl font-bold font-mono text-rose-700 mt-1">
+            <div className="text-2xl sm:text-3xl font-extrabold font-mono text-rose-800 dark:text-rose-300 mt-1.5">
               {failedStudents}
             </div>
-            <div className="text-[11px] text-rose-500 mt-1">
+            <div className="text-xs text-rose-700 dark:text-rose-300/90 mt-1 font-medium">
               Requires academic intervention
             </div>
           </div>
 
-          <div className="p-4 rounded-xl bg-teal-50/40 border border-teal-100">
-            <div className="flex items-center gap-2 text-teal-800 text-xs font-medium uppercase tracking-wider">
-              <Award className="w-3.5 h-3.5 text-teal-600" />
+          {/* Card 4: Average Score */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-teal-50/70 dark:bg-teal-950/40 border border-teal-200/80 dark:border-teal-700/50 shadow-2xs transition-all">
+            <div className="flex items-center gap-2 text-teal-800 dark:text-teal-300 text-xs font-semibold uppercase tracking-wider">
+              <Award className="w-4 h-4 text-teal-600 dark:text-teal-400" />
               <span>Average Score</span>
             </div>
-            <div className="text-2xl sm:text-3xl font-bold font-mono text-teal-900 mt-1">
+            <div className="text-2xl sm:text-3xl font-extrabold font-mono text-teal-900 dark:text-teal-200 mt-1.5">
               {averageScore}
             </div>
-            <div className="text-[11px] text-teal-600 mt-1">
+            <div className="text-xs text-teal-700 dark:text-teal-300/90 mt-1 font-medium">
               {distinctionRate}% honors (80+)
             </div>
           </div>

@@ -125,54 +125,58 @@ export const ScoreAnalysisView: React.FC<ScoreAnalysisViewProps> = ({
 
       {/* Analytical KPI Summary Cards */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div className="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/80 shadow-2xs">
-          <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-400 uppercase tracking-wider">
-            <Users className="w-4 h-4 text-teal-600" />
+        {/* Cohort Size */}
+        <div className="bg-white dark:bg-slate-800/60 p-4 sm:p-5 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-2xs transition-all">
+          <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+            <Users className="w-4 h-4 text-teal-600 dark:text-teal-400" />
             <span>Cohort Size</span>
           </div>
-          <div className="text-2xl sm:text-3xl font-bold font-mono text-slate-900 mt-1">
+          <div className="text-2xl sm:text-3xl font-extrabold font-mono text-slate-900 dark:text-white mt-1.5">
             {total}
           </div>
-          <div className="text-[11px] text-slate-400 mt-0.5">
+          <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
             Active verified profiles
           </div>
         </div>
 
-        <div className="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/80 shadow-2xs">
-          <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-700 uppercase tracking-wider">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+        {/* Pass Rate */}
+        <div className="bg-emerald-50/70 dark:bg-emerald-950/40 p-4 sm:p-5 rounded-2xl border border-emerald-200/80 dark:border-emerald-700/50 shadow-2xs transition-all">
+          <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-800 dark:text-emerald-300 uppercase tracking-wider">
+            <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
             <span>Pass Rate (&gt;50)</span>
           </div>
-          <div className="text-2xl sm:text-3xl font-bold font-mono text-emerald-800 mt-1">
+          <div className="text-2xl sm:text-3xl font-extrabold font-mono text-emerald-800 dark:text-emerald-300 mt-1.5">
             {passRate}%
           </div>
-          <div className="text-[11px] text-emerald-600 mt-0.5">
+          <div className="text-xs text-emerald-700 dark:text-emerald-300/90 mt-1 font-medium">
             {passed} students above threshold
           </div>
         </div>
 
-        <div className="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/80 shadow-2xs">
-          <div className="flex items-center gap-1.5 text-xs font-semibold text-rose-700 uppercase tracking-wider">
-            <ShieldAlert className="w-4 h-4 text-rose-500" />
+        {/* At-Risk */}
+        <div className="bg-rose-50/70 dark:bg-rose-950/40 p-4 sm:p-5 rounded-2xl border border-rose-200/80 dark:border-rose-700/50 shadow-2xs transition-all">
+          <div className="flex items-center gap-1.5 text-xs font-semibold text-rose-800 dark:text-rose-300 uppercase tracking-wider">
+            <ShieldAlert className="w-4 h-4 text-rose-600 dark:text-rose-400" />
             <span>At-Risk (&le;50)</span>
           </div>
-          <div className="text-2xl sm:text-3xl font-bold font-mono text-rose-700 mt-1">
+          <div className="text-2xl sm:text-3xl font-extrabold font-mono text-rose-800 dark:text-rose-300 mt-1.5">
             {failed}
           </div>
-          <div className="text-[11px] text-rose-500 mt-0.5">
+          <div className="text-xs text-rose-700 dark:text-rose-300/90 mt-1 font-medium">
             Require academic intervention
           </div>
         </div>
 
-        <div className="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/80 shadow-2xs">
-          <div className="flex items-center gap-1.5 text-xs font-semibold text-teal-800 uppercase tracking-wider">
-            <Award className="w-4 h-4 text-teal-600" />
+        {/* Mean / Median */}
+        <div className="bg-teal-50/70 dark:bg-teal-950/40 p-4 sm:p-5 rounded-2xl border border-teal-200/80 dark:border-teal-700/50 shadow-2xs transition-all">
+          <div className="flex items-center gap-1.5 text-xs font-semibold text-teal-800 dark:text-teal-300 uppercase tracking-wider">
+            <Award className="w-4 h-4 text-teal-600 dark:text-teal-400" />
             <span>Mean / Median</span>
           </div>
-          <div className="text-2xl sm:text-3xl font-bold font-mono text-teal-900 mt-1">
-            {avgScore} <span className="text-sm font-normal text-slate-400">/ {medianScore}</span>
+          <div className="text-2xl sm:text-3xl font-extrabold font-mono text-teal-900 dark:text-teal-200 mt-1.5">
+            {avgScore} <span className="text-sm font-normal text-slate-500 dark:text-slate-400">/ {medianScore}</span>
           </div>
-          <div className="text-[11px] text-teal-700 mt-0.5">
+          <div className="text-xs text-teal-700 dark:text-teal-300/90 mt-1 font-medium">
             Scale 0 - 100 points
           </div>
         </div>

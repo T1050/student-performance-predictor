@@ -8,7 +8,7 @@ export interface StudentInput {
   studentId: string;
   studentName: string;
   attendanceRate: number; // 50.0 - 100.0%
-  weeklyStudyHours: number; // 0 - 39
+  weeklyStudyHours: number; // 0 - 50
   previousSemesterScore: number; // 40.0 - 100.0%
   sleepHoursPerNight: number; // 4.0 - 10.0
   extracurricularActivities: 0 | 1;
