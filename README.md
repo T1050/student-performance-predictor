@@ -11,44 +11,44 @@ An end-to-end machine learning web application that predicts academic outcomes b
 
 ---
 
-## Features
 
-## ✨ Features
 
-* 📊 **Student Performance Prediction**
+##  Features
+
+*  **Student Performance Prediction**
   Predicts students' final assessment scores using academic and behavioral indicators such as attendance, study/revision habits, previous scores, and sleep.
 
-* 🖥️ **Interactive Web Interface**
+*  **Interactive Web Interface**
   Provides a user-friendly dashboard where users can enter student metrics and receive immediate performance predictions.
 
-* ⚙️ **Automated Data Pipeline**
+*  **Automated Data Pipeline**
   Includes modular components for data ingestion, data cleaning, feature encoding, scaling, and model inference.
 
-* ⚖️ **Model Explainability & Feature Importance**
+*  **Model Explainability & Feature Importance**
   Identifies and explains the importance/contribution of key factors, such as attendance rate, study hours, revision habits, previous scores, and sleep, in influencing the predicted performance.
 
-* 🤖 **Multiple Machine Learning Models**
+*  **Multiple Machine Learning Models**
   Allows users to switch between:
 
   * **Random Forest** — Primary prediction model
   * **Linear Regression** — Baseline comparison model
 
-* 🔮 **Predicted Score & Pass Status**
+*  **Predicted Score & Pass Status**
   Generates the predicted final score and determines the student's status using a predefined passing threshold.
 
-* 📥 **Downloadable Prediction Report**
+*  **Downloadable Prediction Report**
   Enables users to download prediction results and relevant student performance information.
 
-* 📈 **Performance Analytics**
+*  **Performance Analytics**
   Provides cohort-level insights including score distribution, average performance, pass rate, and at-risk students.
 
-* 👥 **Sample Student Analysis**
+*  **Sample Student Analysis**
   Includes developer-created sample student profiles as a preview to demonstrate the prediction and analytics workflow.
 
-* 📋 **Student Roster & Analysis**
+*  **Student Roster & Analysis**
   Provides a consolidated view of evaluated students and their performance indicators.
 
-* 🔄 **Model Comparison**
+*  **Model Comparison**
   Enables comparison between the primary Random Forest model and the Linear Regression baseline to explore differences in predictions.
 
 
