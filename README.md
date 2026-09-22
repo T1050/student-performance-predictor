@@ -1,13 +1,13 @@
 # student-performance-predictor[cite: 1]
 
-An end-to-end machine learning web application that predicts academic outcomes based on historical grades, attendance records, study habits, and socioeconomic indicators[cite: 1].
+An end-to-end machine learning web application that predicts academic outcomes based on historical grades, attendance records, study habits, and socioeconomic indicators.
 
 ---
 
 ## Authors & Support
 
-* **Developers:** Anish Nath and Tithibrata Biswas[cite: 1]
-* **Support Emails:** [nathanish6@gmail.com](mailto:nathanish6@gmail.com) and [tithibrata123@gmail.com](mailto:tithibrata123@gmail.com)[cite: 1]
+* **Developers:** Anish Nath and Tithibrata Biswas
+* **Support Emails:** [nathanish6@gmail.com](mailto:nathanish6@gmail.com) and [tithibrata123@gmail.com](mailto:tithibrata123@gmail.com)
 
 ---
 
