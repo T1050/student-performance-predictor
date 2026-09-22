@@ -1,6 +1,7 @@
 # student-performance-predictor Insight Ed
 
-An end-to-end machine learning web application that predicts academic outcomes based on historical grades, attendance records, study habits, and socioeconomic indicators.
+ An end-to-end machine learning web application that predicts academic outcomes based on historical grades, attendance records, study habits, and socioeconomic indicators.
+* InsightEd : https://insight-ed-nine.vercel.app/
 
 ---
 
